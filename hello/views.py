@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import  HttpResponse
+from django.views.generic import TemplateView
+
 
 # Create your views here.
 
@@ -15,3 +17,6 @@ def hello(request):
                         '<h1>Hello, World</h1>'
                         '</body>'
                         '</html>')
+
+class main(TemplateView):
+    template_name = 'main.html'
